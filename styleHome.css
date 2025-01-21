@@ -1,0 +1,206 @@
+/* Reset y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #52575c, #f8f9fa); /* Degradado de gris oscuro a gris claro */
+}
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #575757;
+    padding: 0.8rem 2rem;
+    color: white;
+}
+
+nav .logo img {
+    max-height: 50px;
+}
+
+nav .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1600x600/343a40/ffffff?text=Bienvenido') no-repeat center center/cover;
+    text-align: center;
+    padding: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 1rem auto;
+    overflow: hidden;
+    background-color: #d1d0d0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    min-height: 100%;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* Efecto de zoom al hover en la imagen activa */
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+/* Zoom cuando está en primer plano y se aplica hover */
+.carousel-item:first-child img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecto hover de zoom solo para la imagen activa */
+.carousel-item.active img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}   
+
+/* Botones de navegación */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eeeeee;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 1rem;
+}
+
+
+
+
+
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bb1010;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #343a40;
+}
+
+
+
+
+
+
+
+/* Tarjetas */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.card {
+    background: #dee2e6;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #575757;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #ffc107;
+}

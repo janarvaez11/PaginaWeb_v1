@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inspección</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Inspección de Procesos</h1>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Registrar Usuarios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#" id="logout">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <main class="container">
+        <form id="formularioInspeccion" class="formulario">
+            <!-- División 1 -->
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="ordenInspeccion">Orden de Inspección</label>
+                    <input type="text" id="ordenInspeccion" placeholder="Ingrese la orden" required>
+                </div>
+                <div class="input-field">
+                    <label for="estadoInspeccion">Estado</label>
+                    <select id="estadoInspeccion" required>
+                        <option value="" disabled selected>Selecciona el estado</option>
+                        <option value="Abierto">Abierto</option>
+                        <option value="Cancelado">Cancelado</option>
+                        <option value="Cerrado">Cerrado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- División 2 -->
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="tipoInspeccion">Tipo de Inspección</label>
+                    <select id="tipoInspeccion" required>
+                        <option value="" disabled selected>Selecciona el tipo</option>
+                        <option value="Proceso">Proceso</option>
+                        <option value="Producto Terminado">Producto Terminado</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="fechaInspeccion">Fecha Programada</label>
+                    <input type="date" id="fechaInspeccion" required>
+                </div>
+            </div>
+
+            <!-- División 3 -->
+            <div class="form-group">
+                <div class="input-field">
+                    <label for="procesoProduccionInspeccion">Proceso de Producción</label>
+                    <select id="procesoProduccionInspeccion" required>
+                        <option value="" disabled selected>Selecciona un proceso</option>
+                        <option value="Abastecimiento">Abastecimiento</option>
+                        <option value="Torres y Apernados">Torres y Apernados</option>
+                        <option value="Armado y Soldadura">Armado y Soldadura</option>
+                        <option value="Pintura">Pintura</option>
+                        <option value="Galvanizado">Galvanizado</option>
+                        <option value="PMC">PMC</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="procesoEspecificacionInspeccion">Especificación del Proceso</label>
+                    <select id="procesoEspecificacionInspeccion" required>
+                        <option value="" disabled selected>Selecciona una especificación</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+            <!-- División COMPARTIDA ENTRE INFORMACION Y ESPECIFICACIÓN -->
+            <div class="form-group">
+                <!-- División fija: Información de Inspección -->
+                <div class="left-section">
+                    <h2>Información de Inspección</h2>
+                    
+                        <div class="input-group">
+                            <label for="ctInspeccion">Responsable CT Inspeccionado:</label>
+                            <input type="number" id="ctInspeccion" placeholder="Ingrese responsable CT">
+                        </div>
+                        <div class="input-group">
+                            <label for="responsableInspeccion">Responsable Inspección:</label>
+                            <input type="number" id="responsableInspeccion" placeholder="Ingrese responsable de inspección">
+                        </div>
+                        <div class="input-group">
+                            <label for="instrumentoMedicion">Instrumento de Medición:</label>
+                            <select id="instrumentoMedicion">
+                                <option value="">Seleccione...</option>
+                                <option value="Flexometro">Flexómetro</option>
+                                <option value="Micrometro">Micrómetro</option>
+                                <option value="Medidor Especial">Medidor Especial</option>
+                            </select>
+                            <input type="text" id="codigoInstrumento" placeholder="Código del instrumento">
+                        </div>
+                        <div class="input-group">
+                            <label for="muestraInspeccion">Muestra:</label>
+                            <input type="text" id="muestraInspeccion" placeholder="Ingrese muestra">
+                        </div>
+                    
+                </div>
+        
+                <!-- División dinámica: Específica de Inspección -->
+                <div class="right-section">
+                    <h2>Información Específica</h2>
+                        <div class="input-group">
+                            <label for="clienteInspeccion">Cliente:</label>
+                            <input type="text" id="clienteInspeccion" placeholder="Ingrese cliente">
+                        </div>
+                        <div class="input-group">
+                            <label for="figInspeccion">Fig:</label>
+                            <input type="text" id="figInspeccion" placeholder="Ingrese fig">
+                        </div>
+                        <div class="input-group">
+                            <label for="proyectoInspeccion">Proyecto:</label>
+                            <input type="text" id="proyectoInspeccion" placeholder="Ingrese proyecto">
+                        </div>
+                        <div class="input-group">
+                            <label for="areaInspeccion">Área:</label>
+                            <input type="text" id="areaInspeccion" placeholder="Ingrese área">
+                        </div>
+                        <div class="input-group">
+                            <label for="designacionInspeccion">Designación:</label>
+                            <input type="text" id="designacionInspeccion" placeholder="Ingrese designación">
+                        </div>
+                        <div class="input-group">
+                            <label for="normaInspeccion">Norma Aplicable:</label>
+                            <input type="text" id="normaInspeccion" placeholder="Ingrese norma aplicable">
+                        </div>
+                        <div class="input-group">
+                            <label for="loteInspeccion">Lote:</label>
+                            <input type="text" id="loteInspeccion" placeholder="Ingrese lote">
+                        </div>
+                </div>
+            </div>
+
+
+            
+
+            <div class="form-actions">
+                <button type="submit" class="btn">Enviar Datos</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Inspección de Procesos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
