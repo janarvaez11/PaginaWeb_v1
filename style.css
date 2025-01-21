@@ -1,0 +1,249 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+/* Navbar */
+
+
+/* Navbar */
+.navbar {
+    background-color: #f35151;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.navbar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Formulario */
+.formulario {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupos de campos */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    flex: 1 1 calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.input-field input,
+.input-field select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Botón */
+.form-actions {
+    text-align: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0047ab;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #f35151;
+}
+
+/* Footer */
+.footer {
+    background-color: #f35151;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+
+    .input-field {
+        flex: 1 1 100%;
+    }
+}
+
+
+/*¿++++++++++++++++++++++++++++++
+/* Estilos para la división general */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la sección izquierda */
+.left-section {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.left-section .input-group {
+    margin-bottom: 15px;
+}
+
+.left-section .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.left-section .input-group input,
+.left-section .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.left-section .input-group input:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* Estilos para la sección derecha */
+.right-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.right-section .input-group {
+    margin-bottom: 15px;
+}
+
+.right-section .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.right-section .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilos para campos dinámicos */
+#dynamicFields {
+    display: none; /* Oculto por defecto */
+}
+
+#dynamicFields .input-group input {
+    font-size: 14px;
+}
+
+#dynamicFields .input-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilos para mostrar los campos dinámicos */
+#dynamicFields.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
